@@ -16,3 +16,10 @@ def configure_plotly_browser_state():
 from plotly.offline import init_notebook_mode
 IPython.get_ipython().events.register('pre_run_cell', configure_plotly_browser_state)
 init_notebook_mode()
+
+
+def plot(x, y, **kwargs):
+    "A simple plotting function"
+      return [go.Scatter(dict(x = x.detach().numpy(),
+                              y = y.detach().numpy(),
+                              **kwargs))]
