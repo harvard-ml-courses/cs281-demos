@@ -1,5 +1,6 @@
+import IPython
+
 def configure_plotly_browser_state():
-  import IPython
   display(IPython.core.display.HTML('''
         <script src="/static/components/requirejs/require.js"></script>
         <script>
@@ -12,6 +13,6 @@ def configure_plotly_browser_state():
         </script>
         '''))
 
-import IPython
+from plotly.offline import init_notebook_mode
 IPython.get_ipython().events.register('pre_run_cell', configure_plotly_browser_state)
 init_notebook_mode()
