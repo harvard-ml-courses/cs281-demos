@@ -20,6 +20,6 @@ init_notebook_mode()
 
 def plot(x, y, **kwargs):
     "A simple plotting function"
-      return [go.Scatter(dict(x = x.detach().numpy(),
-                              y = y.detach().numpy(),
-                              **kwargs))]
+    return [go.Scatter(dict(x = x.detach().numpy(),
+                            y = y.detach().numpy(),
+                            **kwargs))]
