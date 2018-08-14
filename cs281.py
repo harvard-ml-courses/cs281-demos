@@ -14,6 +14,7 @@ def configure_plotly_browser_state():
         '''))
 
 from plotly.offline import init_notebook_mode
+import plotly.graph_objs as go
 IPython.get_ipython().events.register('pre_run_cell', configure_plotly_browser_state)
 init_notebook_mode()
 
